@@ -1,0 +1,118 @@
+{% extends 'base.html' %}
+{% block code %}
+<section id="hero">
+    <div class="hero-container">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+        * {box-sizing: border-box}
+        body {font-family: "Lato", sans-serif;}
+        
+        /* Style the tab */
+        .tab {
+          float: left;
+          border: 1px solid #ccc;
+          background-color: #f1f1f1;
+          width: 30%;
+          height: 300px;
+        }
+        
+        /* Style the buttons inside the tab */
+        .tab button {
+          display: block;
+          background-color: ;
+          color: black;
+          padding: 22px 16px;
+          width: 100%;
+          border: none;
+          outline: none;
+          text-align: left;
+          cursor: pointer;
+          font-size: 17px;
+        }
+        
+        /* Change background color of buttons on hover */
+        .tab button:hover {
+          background-color: #ddd;
+        }
+        
+        /* Create an active/current "tab button" class */
+        .tab button.active {
+          background-color: #ccc;
+        }
+        
+        /* Style the tab content */
+        .tabcontent {
+          float: left;
+          padding: 0px 12px;
+          border: 1px solid #ccc;
+          width: 70%;
+          border-left: none;
+          height: 300px;
+          display: none;
+        }
+        
+        /* Clear floats after the tab */
+        .clearfix::after {
+          content: "";
+          clear: both;
+          display: table;
+        }
+        </style>
+        </head>
+        <body>
+        
+        <h1>About</h1>
+        <p style="color:white;">Analysis and Prediction of Crime Hotspots using machine learning with Stacked Generalization Approach</p>
+        
+        <div class="tab">
+          <button class="tablinks" onmouseover="openCity(event, 'Information')"><h2 style='color:black;'>Information</h2></button>
+          <button class="tablinks" onmouseover="openCity(event, 'Algorithms')"><h2 style='color:black;'>Algorithms</h2></button>
+          <button class="tablinks" onmouseover="openCity(event, 'DataSet')"><h2 style='color:black;'>DataSet</h2></button>
+        </div>
+        
+        <div id="Information" class="tabcontent">
+            <br>
+          <h2 >Information</h2>
+          <p style="color:white;">Ensemble learning method is a collaborative decision-making mechanism that implements to
+            aggregate the predictions of learned classifiers in order to produce new instances. Early analysis has shown
+            that the ensemble classifiers are more reliable than any single part classifier, both empirically and logically.
+            While several ensemble methods are presented, it is still not an easy task to find an appropriate configuration
+            for a particular dataset. Several prediction-based theories have been proposed to handle machine learning
+            crime prediction problem in India. It becomes a challenging problem to identify the dynamic nature of crimes.
+            Crime prediction is an attempt to reduce crime rate and deter criminal activities</p>
+        </div>
+        
+        <div id="Algorithms" class="tabcontent">
+            <br>
+          <h2>Algorithms</h2>
+          <p style="color:white;">In This Project we will impliment on deision tree, random forest and gradient boosting classifier algorithms</p> 
+        </div>
+        
+        <div id="DataSet" class="tabcontent">
+            <br>
+          <h2>DataSet</h2>
+          <p style="color:white;">In this Project we will used on  a 20230320020226crime_data_extended_entries.csv Dataset and size is 73.6 KB (75,404 bytes)</p>
+        </div>
+        
+        <div class="clearfix"></div>
+        
+        <script>
+        function openCity(evt, cityName) {
+          var i, tabcontent, tablinks;
+          tabcontent = document.getElementsByClassName("tabcontent");
+          for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+          }
+          tablinks = document.getElementsByClassName("tablinks");
+          for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+          }
+          document.getElementById(cityName).style.display = "block";
+          evt.currentTarget.className += " active";
+        }
+        </script>
+           
+        
+    </div>
+  </section><!-- End Hero -->
+{% endblock %}

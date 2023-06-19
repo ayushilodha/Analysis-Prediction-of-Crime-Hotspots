@@ -1,0 +1,50 @@
+{% extends 'base1.html' %}
+{% block code %}
+<div class="hero-container">
+      
+  <form  method="post" enctype="multipart/form-data" >
+    <center>
+
+    {% csrf_token %}
+    <div class="about_text" style="padding-top: 100px;">
+        <style >
+            table,
+            td {
+                padding: 10px;
+                border: 1px solid  rgb(0, 191, 255);
+                border-collapse: collapse;
+                text-align-last: right;
+            }
+        </style>
+        
+      <center style="padding-top: 100px;">
+            <table style="margin-left: 4px;color: rgb(0, 191, 255);"><b>
+              <center> 
+                {{table | safe}}
+                    <tr>
+                        {%for c in columns%}
+                        <tr>
+                        {%for a in c%}
+                        <td style="color:rgb(0, 191, 255);"><b>{{a}}</b></td>
+                        {%endfor%}
+                        </tr>
+                        {%endfor%}
+                   
+                     
+                    {%for r in rows%}
+                    <tr>
+                        {%for j in r%}
+                        <td style="color: rgb(0, 191, 255);">{{ j }}</td>
+                        {%endfor%}
+                    </tr>
+                    
+                    {%endfor%}
+                    
+                </b> </table> 
+        </center>
+    </div>
+</form>
+    </div>
+  </div>
+</section><!-- End Hero -->
+{% endblock  %}

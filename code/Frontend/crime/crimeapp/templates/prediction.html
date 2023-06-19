@@ -1,0 +1,184 @@
+{% extends 'base1.html' %}
+{% block code %}
+ <!-- ======= Hero Section ======= -->
+ <section id="hero">
+    <div class="hero-container">
+        <center><h1>{{msg}}</h1></center>
+      
+        <form action="" method="post">
+            {% csrf_token %}
+  
+          <table>
+              <tr>
+                
+                 <td>
+                    <label style='color:white'>location</label> 
+                    <br>               
+                    <select name="f1" style="height: 50px;width: 190px;width: 190px;">
+                       <option value="0">Select an location</option>
+                      <option value="1">Banashankari</option>
+                      <option value="2">Bellandur</option>
+                      <option value="3">Electronic City</option>
+                      <option value="4">HSR layout</option>
+                      <option value="5">Indiranagar</option>
+                      <option value="6">jayanagar</option>
+                      <option value="7">jp nagar</option>
+                      <option value="8">Kamakshipalya</option>
+                      <option value="9">Koramangala</option>
+                        <option value="10">Marathahalli</option>
+                        <option value="11">White Field</option>
+                        <option value="12">Yelahanka</option>
+
+                  </select>
+
+                 <!-- </td>
+                 &nbsp&nbsp
+                 <td>                
+                        <label style='color:white'>latitude</label> 
+                        <br>
+                          <input type="float" name = 'f2' placeholder="latitude" style='height:50px'>
+                 </td>
+                 &nbsp&nbsp
+                 <td>                
+                    <label style='color:white'>longitude</label> 
+                    <br>
+                    <input type="float" name = 'f3' placeholder="latitude" style='height:50px'>
+                 </td>
+                 &nbsp&nbsp -->
+                 <td>                
+                    <label style='color:white'>victim_gender</label> 
+                    <br>               
+                    <select name="f4" style="height: 50px;width: 190px;width: 190px;">
+                       <option value="0">Select a victim_gender</option>
+                      <option value="1">Male</option>
+                      <option value="2">Female</option>
+                      <option value="2">Others</option>
+                  </select>
+                  </td>
+                  &nbsp&nbsp
+                  <td>                
+                    <label style='color:white'>victim_age</label> 
+                    <br>
+                          <input type="float" name = 'f5' placeholder="victim_age" style='height:50px'>
+           </td>
+           &nbsp&nbsp
+           <td>                
+            <label style='color:white'>perpetrator_gender</label> 
+                    <br>               
+                    <select name="f6" style="height: 50px;width: 190px;width: 190px;">
+                       <option value="0">Select a perpetrator_gender</option>
+                      <option value="1">Male</option>
+                      <option value="2">Female</option>
+                      <option value="2">Others</option>
+                  </select>
+           </td>
+                  
+                 <br>
+
+                 <td>                
+                <label style='color:white'>perpetrator_age</label> 
+                <br>
+                <input type="float" name = 'f7' placeholder="perpetrator_age" style='height:50px'>
+               </td>
+               &nbsp&nbsp
+               <td>                
+                <label style='color:white'>weapon</label> 
+                <br>               
+                <select name="f8" style="height: 50px;width: 190px;width: 190px;">
+                   <option value="0">Select a weapon</option>
+                   <option value="1">Blunt Object</option>
+                  <option value="2">Gun</option>
+                  <option value="3">Knife</option>
+                  <option value="4">None</option>
+
+                  
+              </select>
+               </td>
+            
+  
+  
+              </tr>
+              <tr>
+          </table>
+
+         <center>
+          <table>
+            <tr>
+                
+                
+               
+               
+               &nbsp&nbsp
+               <td>                
+                <label style='color:white'>injury</label> 
+                <br>               
+                <select name="f9" style="height: 50px;width: 190px;width: 190px;">
+                   <option value="0">Select an injury</option>
+                   <option value="1">Fatal</option>
+                  <option value="2">Major</option>
+                  <option value="3">Minor</option>
+                  <option value="4">None</option>
+              </select>
+                </td>
+
+                <td>                
+                    <label style='color:white'>weather</label> 
+                <br>               
+                <select name="f10" style="height: 50px;width: 190px;width: 190px;">
+                   <option value="0">Select weather</option>
+                   <option value="1">clear</option>
+                  <option value="2">overcast</option>
+                  <option value="3">Partly Cloudy</option>
+                  <option value="4">Rain</option>
+                  <option value="5">Snow</option>
+              </select>
+         </td>
+         
+         <td>                
+            <label style='color:white'>temperature</label> 
+            <br>
+            <input type="float" name = 'f11' placeholder="temperature" style='height:50px'>
+         </td>
+         
+         <td>                
+            <label style='color:white'>previous_activity</label> 
+                <br>               
+                <select name="f12" style="height: 50px;width: 190px;width: 190px;">
+                   <option value="0">Select an previous_activity</option>
+                   <option value="1">Assault</option>
+                  <option value="2">Burglary</option>
+                  <option value="3">Drug Offense</option>
+                  <option value="4">Forgery</option>
+                  <option value="5">Fraud</option>
+                  <option value="5">None</option>
+                  <option value="5">Robbery</option>
+                  <option value="5">Theft</option>
+                  <option value="5">Vandalism</option>
+
+              </select>
+         </td>
+                
+               <br>
+          
+
+
+            </tr>
+            <tr>
+        </table>
+        </center>
+
+
+             
+                  <br>
+              <div class="centered">
+                <br><br>
+              <button type="submit" class="btn btn-primary" style="width: 400px; border-radius: 20%;">Submit</button>
+          </form>
+
+
+
+      </div>
+    </div>
+  </section><!-- End Hero -->
+{% endblock %}
+
